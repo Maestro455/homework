@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Площадь фигур</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <p>Калькулятор площади ромба (не копипаста со stack overflow)</p>
+        </div>
+    </header>
+    <main>
+        <div class="main-menu">
+            <div class="main-menu_ways">
+                <div class="menu_ways-ask">
+                    <p>Выберите способ рассчета площади: <br>
+                        (По нажатию на пункт открыть/скрыть)
+                    </p>
+                </div>
+                <div class="menu_ways-item1">
+                    <p>По длине стороны умноженной на длину высоты, проведенной к этой стороне </p>
+                </div>
+                <div class="menu_ways-item2">
+                    <p>По квадрату стороны умноженной на синус угла между сторонами</p>
+                </div>
+                <div class="menu_ways-item3">
+                    <p>По половие произведения его диагоналей</p>
+                </div>
+            </div>
+        </div>
+        <div class="hide-container _hidden">
+            <div class="menu_console-header">
+                <p>
+                    Введите значения:
+                </p>
+            </div>
+            <div class="main-menu_console">
+                <div class="console-form1">
+                    <input id="val1" type="number" name="quantity" placeholder="Значение стороны">
+                    <input id="val2" type="number" name="quantity" placeholder="Значение высоты">
+                </div>
+                <input id="butt1" class="btn" type="button" value="Ввести" /><br><br>
+                <input id="alg1" class="btn" type="button" value="Показать/скрыть алгоритм" /><br><br>
+            </div>
+            <div class="console-img">
+                <img class="hide-img" src="https://raw.githack.com/Maestro455/homework/main/way1.PNG" alt="">
+            </div>
+            <div class="main-menu_result">
+                <p>Площадь ромба равна:</p>
+                <span id="js1"></span>
+            </div>
+        </div>
+
+        <div class="hide-container2 _hidden">
+            <div class="menu_console-header">
+                <p>
+                    Введите значения:
+                </p>
+            </div>
+            <div class="main-menu_console">
+                <div class="console-form1">
+                    <input id="val3" type="number" name="quantity" placeholder="Значение стороны">
+                    <input id="val4" type="number" name="quantity" placeholder="Значение синуса угла">
+                </div>
+                <input id="butt2" class="btn" type="button" value="Ввести" /><br><br>
+                <input id="alg2" class="btn" type="button" value="Показать/скрыть алгоритм" /><br><br>
+            </div>
+            <div class="console-img">
+                <img class="hide-img1" src="https://raw.githack.com/Maestro455/homework/main/way2.PNG" alt="">
+            </div>
+            <div class="main-menu_result">
+                <p>Площадь ромба равна:</p>
+                <div id="js2"></div>
+            </div>
+        </div>
+
+        <div class="hide-container3 _hidden">
+            <div class="menu_console-header">
+                <p>
+                    Введите значения:
+                </p>
+            </div>
+            <div class="main-menu_console">
+                <div class="console-form1">
+                    <input id="val5" type="number" name="quantity" placeholder="Значение диагонали 1">
+                    <input id="val6" type="number" name="quantity" placeholder="Значение диагонали 2">
+                </div>
+                <input id="butt3" class="btn" type="button" value="Ввести" /><br><br>
+                <input id="alg3" class="btn" type="button" value="Показать/скрыть алгоритм" /><br><br>
+            </div>
+            <div class="console-img">
+                <img class="hide-img2" src="https://raw.githack.com/Maestro455/homework/main/way3.PNG" alt="">
+            </div>
+            <div class="main-menu_result">
+                <p>Площадь ромба равна:</p>
+                <div id="js3"></div>
+            </div>
+        </div>
+
+        <div class="atmega">
+            <div class="atmega-title">
+                <p>Далее цифровая схемотехника:</p>
+            </div>
+            <p> <b>Микроконтроллер Atmega8</b> довольно часто используется в радиолюбительских схемах,сделан он с
+                использованием
+                технологии <b>CMOS</b> на <b>AVR RISC</b> архитектуре. За один такт выполняется одна инструкция, на
+                микроконтроллера
+                ATmega8 достигается производительность в 1MIPS на МГц, и тем самым достигается наиболее оптимальная
+                производительность и потребляемая энергия. <br><br>
+                <i>Технические характеристики:</i><br>
+                • Программная память равна 8 кБ, цикл составляет 10000 раз; <br>
+                • объем флеш памяти 512 байт который хранит переменные (цикл перезаписи 100 000);<br>
+                • Оперативная память (ОЗУ) 1кб;<br>
+                • 32 регистра общего назначения;<br>
+                • Два 8-ми разрядных таймера/счетчика с раздельным прескалером, режим сравнения, режим захвата;<br>
+                • таймер реального времени с независимым генератором;<br>
+                • три канала ШИМ;<br>
+                • шесть каналов АЦП, канал 10-ти разрядный;<br>
+                • последовательный интерфейс двухпроводной;<br>
+                • USART;<br>
+                • SPI ;<br>
+                • Сторожевой таймер с независимым генератором;<br>
+                • аналоговый компаратор;<br>
+                • внутренний RC генератор;<br>
+                • возможность обработки внешних и внутренних прерываний;<br>
+                • режимы с пониженным энергопотреблением: Idle,Power-save,Power-down,Standby,ADC Noise Reduction;<br>
+                • напряжение от 4.5 В до 5.5 В;<br>
+                • тактовая частота от 0-16 МГц.<br><br>
+
+                <i>Порты ввода/вывода</i><br><br>
+
+                Порты микроконтроллера сгруппированы в 3 группы:<br><br>
+
+                <b>Порт D</b><br>
+
+                PD0 - цифровой вход/выход, RxD - вход приемника USART;<br>
+                PD1 - цифровой вход/выход, TxD - выход передатчика USART;<br>
+                PD2 - цифровой вход/выход, INT0 - внешнее прерывание нулевого канала;<br>
+                PD3 - цифровой вход/выход, INT1 - внешнее прерывание первого канала;<br>
+                PD4 - цифровой вход/выход, XCK - внешний такт для USART, T0 - внешний вход Timer0;<br>
+                PD5 - цифровой вход/выход, T1 - внешний вход Timer1;<br>
+                PD6 - цифровой вход/выход, AIN0 - вход аналогового компаратора канал 0;<br>
+                PD7 - цифровой вход/выход, AIN1 - вход аналогового компаратор канал 1.<br><br>
+                <b>Порт C</b><br>
+
+                PС0 - цифровой вход/выход, ADC0 - аналоговый вход канал 0;<br>
+                PС1 - цифровой вход/выход, ADC1 - аналоговый вход канал 1;<br>
+                PС2 - цифровой вход/выход, ADC2 - аналоговый вход канал 2;<br>
+                PС3 - цифровой вход/выход, ADC3- аналоговый вход канал 3;<br>
+                PС4 - цифровой вход/выход, ADC4- аналоговый вход канал 3;<br>
+                PC5 - цифровой вход/выход, SDA- двух проводной последовательный интерфейс (канал данных);<br>
+                PС6 - цифровой вход/выход, RESET- внешний сброс.<br><br>
+                <b>Порт B</b><br>
+
+                PB0 - цифровой вход/выход, ICP1 - захват входа 1;<br>
+                PB1 - цифровой вход/выход, OC1A - выход сравнения/ШИМ 1A;<br>
+                PB2 - цифровой вход/выход, OC1B - выход сравнения/ШИМ 1B;<br>
+                PB3 - цифровой вход/выход, OC2 - вход сравнения/ШИМ2, MOSI<br>
+                PB4 - цифровой вход/выход, MISO<br>
+                PB5 - цифровой вход/выход, SCK - тактовый вход;<br>
+                PB6 - цифровой вход/выход, XTAL1- тактовый вход для резонатора;<br>
+                PB7 - цифровой вход/выход, XTAL2- тактовый вход для резонатора, TOSC2 - тактовый вход в случае работы от
+                встроенного резонатора.<br><br>
+                <b>Выводы для питания микроконтроллера</b><br>
+
+                VCC - вход напряжение питания;<br>
+                GND - это общий "минусовой" вывод, земля;<br>
+                AVcc - вход напряжения питания для модуля АЦП;<br>
+                ARef - вход опорного напряжение для АЦП.<br><br>
+
+                <a href="https://radio-magic.ru/microcontrollers/381-mikrokontroller-atmega8">ВЗЯТО С ЭТОГО САЙТА</a>
+            </p>
+            <img src="https://radio-magic.ru/images/articles/mk/mikrokontroller-atmega8.png"
+                title="Расположение выводов микроконтроллера Atmega8">
+        </div>
+    </main>
+
+
+    <script src="https://raw.githack.com/Maestro455/homework/main/jquery.js"></script>
+
+</body>
+<script src="https://raw.githack.com/Maestro455/homework/main/script.js"></script>
+
+</html>
