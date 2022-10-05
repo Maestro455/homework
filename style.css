@@ -183,9 +183,6 @@ input#alg3:active {
     display: none;
     padding-bottom: 35px;
 }
-.atmega {
-    padding: 50px;
-}
 .atmega p {
     line-height: 1.6;
     font-size: 18px;
